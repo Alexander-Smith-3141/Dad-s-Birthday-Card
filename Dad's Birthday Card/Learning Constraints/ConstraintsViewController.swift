@@ -24,13 +24,10 @@ class ConstraintsViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
-    
-    // new comment
-    
+
     private func constraintOn() {
         
-        
-        //        mySquare.transform = .identity
+//                mySquare.transform = .identity
         self.centerYViewConstraint.isActive = true
         
         
@@ -41,7 +38,7 @@ class ConstraintsViewController: UIViewController {
         
         self.centerYViewConstraint.isActive = false
         
-        //        mySquare.transform = CGAffineTransform(translationX: 0, y: 400).concatenating(CGAffineTransform(rotationAngle: 90))
+//                mySquare.transform = CGAffineTransform(translationX: 0, y: 400).concatenating(CGAffineTransform(rotationAngle: 90))
         self.isCentred = !self.isCentred
     }
     override func viewDidLoad() {
@@ -49,8 +46,7 @@ class ConstraintsViewController: UIViewController {
         
         
         mySquare.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        mySquare.center = CGPoint(x: mySquare.bounds.width / 2, y: mySquare.bounds.height / 2)
+        mySquare.layer.position = CGPoint(x: mySquare.bounds.width / 2, y: mySquare.bounds.height / 2)
         // Do any additional setup after loading the view.
     }
-    
 }
